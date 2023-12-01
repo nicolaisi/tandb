@@ -702,6 +702,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  8000572:	4913      	ldr	r1, [pc, #76]	; (80005c0 <HAL_UART_RxCpltCallback+0x78>)
  8000574:	6878      	ldr	r0, [r7, #4]
  8000576:	f001 fd53 	bl	8002020 <HAL_UART_Transmit>
+		 // submit an RTOS Task
 		 memset(data_buffer, 0, count); // empty the data buffer
  800057a:	4b10      	ldr	r3, [pc, #64]	; (80005bc <HAL_UART_RxCpltCallback+0x74>)
  800057c:	681a      	ldr	r2, [r3, #0]
